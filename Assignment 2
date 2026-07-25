@@ -1,0 +1,250 @@
+1. Java Program to Check Whether a Number is Even or Odd
+
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println(num + " is Even.");
+        } else {
+            System.out.println(num + " is Odd.");
+        }
+
+        sc.close();
+    }
+}
+
+
+2. Java Program to Print a Greeting Message
+
+
+import java.util.Scanner;
+
+public class Greeting {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Hello, " + name + "! Welcome.");
+
+        sc.close();
+    }
+}
+
+
+3. Java Program to Calculate Simple Interest
+
+
+import java.util.Scanner;
+
+public class SimpleInterest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double principal, rate, time, si;
+
+        System.out.print("Enter Principal: ");
+        principal = sc.nextDouble();
+
+        System.out.print("Enter Rate: ");
+        rate = sc.nextDouble();
+
+        System.out.print("Enter Time: ");
+        time = sc.nextDouble();
+
+        si = (principal * rate * time) / 100;
+
+        System.out.println("Simple Interest = " + si);
+
+        sc.close();
+    }
+}
+
+
+4. Java Program to Perform Arithmetic Operations Using if Conditions
+
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double a, b;
+
+        System.out.print("Enter first number: ");
+        a = sc.nextDouble();
+
+        System.out.print("Enter second number: ");
+        b = sc.nextDouble();
+
+        System.out.print("Enter operator (+, -, *, /): ");
+        char op = sc.next().charAt(0);
+
+        if (op == '+') {
+            System.out.println("Result = " + (a + b));
+        } else if (op == '-') {
+            System.out.println("Result = " + (a - b));
+        } else if (op == '*') {
+            System.out.println("Result = " + (a * b));
+        } else if (op == '/') {
+            if (b != 0)
+                System.out.println("Result = " + (a / b));
+            else
+                System.out.println("Division by zero is not allowed.");
+        } else {
+            System.out.println("Invalid Operator");
+        }
+
+        sc.close();
+    }
+}
+
+
+5. Java Program to Find the Largest of Two Numbers
+
+
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b)
+            System.out.println("Largest Number = " + a);
+        else
+            System.out.println("Largest Number = " + b);
+
+        sc.close();
+    }
+}
+
+
+6. Java Program to Convert Rupees to USD
+
+
+import java.util.Scanner;
+
+public class RupeesToUSD {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter amount in Rupees: ");
+        double rupees = sc.nextDouble();
+
+        double usd = rupees / 86.0;   // Example exchange rate
+
+        System.out.println("Amount in USD = " + usd);
+
+        sc.close();
+    }
+}
+
+
+7. Java Program to Print Fibonacci Series up to n Terms
+
+
+import java.util.Scanner;
+
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+
+        int first = 0, second = 1;
+
+        System.out.println("Fibonacci Series:");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(first + " ");
+
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+
+        sc.close();
+    }
+}
+
+
+8. Java Program to Check Whether a String is Palindrome
+
+
+import java.util.Scanner;
+
+public class StringPalindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a String: ");
+        String str = sc.nextLine();
+
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+
+        if (str.equalsIgnoreCase(rev))
+            System.out.println("The String is a Palindrome.");
+        else
+            System.out.println("The String is Not a Palindrome.");
+
+        sc.close();
+    }
+}
+
+
+9. Java Program to Find Armstrong Numbers Between Two Given Numbers
+
+
+import java.util.Scanner;
+
+public class ArmstrongRange {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter starting number: ");
+        int start = sc.nextInt();
+
+        System.out.print("Enter ending number: ");
+        int end = sc.nextInt();
+
+        System.out.println("Armstrong Numbers:");
+
+        for (int num = start; num <= end; num++) {
+            int temp = num;
+            int sum = 0;
+            int digits = String.valueOf(num).length();
+
+            while (temp > 0) {
+                int rem = temp % 10;
+                sum += Math.pow(rem, digits);
+                temp /= 10;
+            }
+
+            if (sum == num) {
+                System.out.println(num);
+            }
+        }
+
+        sc.close();
+    }
+}
