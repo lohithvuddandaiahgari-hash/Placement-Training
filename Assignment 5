@@ -1,0 +1,706 @@
+1. Build Array from Permutation (LeetCode 1920)
+
+
+Java Code
+class Solution {
+    public int[] buildArray(int[] nums) {
+        int[] ans = new int[nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+            ans[i] = nums[nums[i]];
+        }
+
+        return ans;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+2. Concatenation of Array (LeetCode 1929)
+
+
+Java Code
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[2 * n];
+
+        for (int i = 0; i < n; i++) {
+            ans[i] = nums[i];
+            ans[i + n] = nums[i];
+        }
+
+        return ans;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+3. Running Sum of 1D Array (LeetCode 1480)
+
+
+Java Code
+class Solution {
+    public int[] runningSum(int[] nums) {
+
+        for (int i = 1; i < nums.length; i++) {
+            nums[i] = nums[i] + nums[i - 1];
+        }
+
+        return nums;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+4. Richest Customer Wealth (LeetCode 1672)
+
+
+Java Code
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+
+        int max = 0;
+
+        for (int i = 0; i < accounts.length; i++) {
+
+            int sum = 0;
+
+            for (int j = 0; j < accounts[i].length; j++) {
+                sum += accounts[i][j];
+            }
+
+            if (sum > max)
+                max = sum;
+        }
+
+        return max;
+    }
+}
+
+Time Complexity: O(m × n)
+Space Complexity: O(1)
+
+5. Shuffle the Array (LeetCode 1470)
+
+
+Java Code
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+
+        int[] ans = new int[2 * n];
+        int index = 0;
+
+        for (int i = 0; i < n; i++) {
+            ans[index++] = nums[i];
+            ans[index++] = nums[i + n];
+        }
+
+        return ans;
+    }
+}
+6. Kids With the Greatest Number of Candies (LeetCode 1431)
+Java Code
+class Solution {
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+
+        List<Boolean> result = new ArrayList<>();
+
+        int max = candies[0];
+
+        for (int candy : candies) {
+            if (candy > max)
+                max = candy;
+        }
+
+        for (int candy : candies) {
+            result.add(candy + extraCandies >= max);
+        }
+
+        return result;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+7. Number of Good Pairs (LeetCode 1512)
+Java Code
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+
+        int count = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+}
+
+Time Complexity: O(n²)
+Space Complexity: O(1)
+
+8. How Many Numbers Are Smaller Than the Current Number (LeetCode 1365)
+Java Code
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+
+        int[] ans = new int[nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+
+            int count = 0;
+
+            for (int j = 0; j < nums.length; j++) {
+
+                if (nums[j] < nums[i])
+                    count++;
+            }
+
+            ans[i] = count;
+        }
+
+        return ans;
+    }
+}
+
+Time Complexity: O(n²)
+Space Complexity: O(n)
+
+9. Create Target Array in the Given Order (LeetCode 1389)
+Java Code
+class Solution {
+    public int[] createTargetArray(int[] nums, int[] index) {
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            list.add(index[i], nums[i]);
+        }
+
+        int[] ans = new int[nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+            ans[i] = list.get(i);
+        }
+
+        return ans;
+    }
+}
+
+Time Complexity: O(n²)
+Space Complexity: O(n)
+
+10. Check if the Sentence Is Pangram (LeetCode 1832)
+
+
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+
+        boolean[] letters = new boolean[26];
+
+        for (int i = 0; i < sentence.length(); i++) {
+            letters[sentence.charAt(i) - 'a'] = true;
+        }
+
+        for (boolean present : letters) {
+            if (!present)
+                return false;
+        }
+
+        return true;
+    }
+}
+11. Count Items Matching a Rule (LeetCode 1773)
+Java Code
+class Solution {
+    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+
+        int count = 0;
+        int index = 0;
+
+        if (ruleKey.equals("type"))
+            index = 0;
+        else if (ruleKey.equals("color"))
+            index = 1;
+        else
+            index = 2;
+
+        for (List<String> item : items) {
+            if (item.get(index).equals(ruleValue))
+                count++;
+        }
+
+        return count;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+12. Find the Highest Altitude (LeetCode 1732)
+Java Code
+class Solution {
+    public int largestAltitude(int[] gain) {
+
+        int altitude = 0;
+        int max = 0;
+
+        for (int g : gain) {
+            altitude += g;
+            if (altitude > max)
+                max = altitude;
+        }
+
+        return max;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+13. Flipping an Image (LeetCode 832)
+Java Code
+class Solution {
+    public int[][] flipAndInvertImage(int[][] image) {
+
+        int n = image.length;
+
+        for (int i = 0; i < n; i++) {
+
+            int left = 0;
+            int right = image[i].length - 1;
+
+            while (left <= right) {
+
+                int temp = image[i][left] ^ 1;
+                image[i][left] = image[i][right] ^ 1;
+                image[i][right] = temp;
+
+                left++;
+                right--;
+            }
+        }
+
+        return image;
+    }
+}
+
+Time Complexity: O(n²)
+Space Complexity: O(1)
+
+14. Cells with Odd Values in a Matrix (LeetCode 1252)
+Java Code
+class Solution {
+    public int oddCells(int m, int n, int[][] indices) {
+
+        int[][] matrix = new int[m][n];
+
+        for (int[] index : indices) {
+
+            int row = index[0];
+            int col = index[1];
+
+            for (int i = 0; i < n; i++)
+                matrix[row][i]++;
+
+            for (int i = 0; i < m; i++)
+                matrix[i][col]++;
+        }
+
+        int count = 0;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] % 2 != 0)
+                    count++;
+            }
+        }
+
+        return count;
+    }
+}
+
+Time Complexity: O(k × (m + n) + m × n)
+Space Complexity: O(m × n)
+
+15. Matrix Diagonal Sum (LeetCode 1572)
+Java Code
+class Solution {
+    public int diagonalSum(int[][] mat) {
+
+        int n = mat.length;
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            sum += mat[i][i];
+            sum += mat[i][n - 1 - i];
+        }
+
+        if (n % 2 == 1)
+            sum -= mat[n / 2][n / 2];
+
+        return sum;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+16. Find Numbers with Even Number of Digits (LeetCode 1295)
+Java Code
+class Solution {
+    public int findNumbers(int[] nums) {
+
+        int count = 0;
+
+        for (int num : nums) {
+            int digits = String.valueOf(num).length();
+
+            if (digits % 2 == 0)
+                count++;
+        }
+
+        return count;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+17. Transpose Matrix (LeetCode 867)
+Java Code
+class Solution {
+    public int[][] transpose(int[][] matrix) {
+
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        int[][] result = new int[cols][rows];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[j][i] = matrix[i][j];
+            }
+        }
+
+        return result;
+    }
+}
+
+Time Complexity: O(m × n)
+Space Complexity: O(m × n)
+
+18. Add to Array-Form of Integer (LeetCode 989)
+Java Code
+class Solution {
+    public List<Integer> addToArrayForm(int[] num, int k) {
+
+        List<Integer> result = new ArrayList<>();
+
+        int i = num.length - 1;
+
+        while (i >= 0 || k > 0) {
+
+            if (i >= 0)
+                k += num[i--];
+
+            result.add(0, k % 10);
+            k /= 10;
+        }
+
+        return result;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+19. Maximum Population Year (LeetCode 1854)
+Java Code
+class Solution {
+    public int maximumPopulation(int[][] logs) {
+
+        int[] years = new int[101];
+
+        for (int[] log : logs) {
+            years[log[0] - 1950]++;
+
+            years[log[1] - 1950]--;
+        }
+
+        int maxPop = 0;
+        int current = 0;
+        int year = 1950;
+
+        for (int i = 0; i < years.length; i++) {
+            current += years[i];
+
+            if (current > maxPop) {
+                maxPop = current;
+                year = 1950 + i;
+            }
+        }
+
+        return year;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+20. Determine Whether Matrix Can Be Obtained By Rotation (LeetCode 1886)
+Java Code
+class Solution {
+
+    public boolean findRotation(int[][] mat, int[][] target) {
+
+        for (int i = 0; i < 4; i++) {
+
+            if (isEqual(mat, target))
+                return true;
+
+            mat = rotate(mat);
+        }
+
+        return false;
+    }
+
+    private int[][] rotate(int[][] mat) {
+
+        int n = mat.length;
+        int[][] rotated = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                rotated[j][n - 1 - i] = mat[i][j];
+            }
+        }
+
+        return rotated;
+    }
+
+    private boolean isEqual(int[][] a, int[][] b) {
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[0].length; j++) {
+                if (a[i][j] != b[i][j])
+                    return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+Time Complexity: O(n²)
+Space Complexity: O(n²)
+21. Two Sum (LeetCode 1)
+Java Code
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+
+            int complement = target - nums[i];
+
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+
+            map.put(nums[i], i);
+        }
+
+        return new int[]{};
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+22. Find N Unique Integers Sum up to Zero (LeetCode 1304)
+Java Code
+class Solution {
+    public int[] sumZero(int n) {
+
+        int[] result = new int[n];
+        int index = 0;
+
+        for (int i = 1; i <= n / 2; i++) {
+            result[index++] = i;
+            result[index++] = -i;
+        }
+
+        if (n % 2 == 1) {
+            result[index] = 0;
+        }
+
+        return result;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+23. Lucky Numbers in a Matrix (LeetCode 1380)
+Java Code
+class Solution {
+    public List<Integer> luckyNumbers(int[][] matrix) {
+
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < matrix.length; i++) {
+
+            int minCol = 0;
+
+            for (int j = 1; j < matrix[0].length; j++) {
+                if (matrix[i][j] < matrix[i][minCol]) {
+                    minCol = j;
+                }
+            }
+
+            boolean lucky = true;
+
+            for (int k = 0; k < matrix.length; k++) {
+                if (matrix[k][minCol] > matrix[i][minCol]) {
+                    lucky = false;
+                    break;
+                }
+            }
+
+            if (lucky)
+                result.add(matrix[i][minCol]);
+        }
+
+        return result;
+    }
+}
+
+Time Complexity: O(m × n)
+Space Complexity: O(1)
+
+24. Maximum Subarray (LeetCode 53)
+Java Code
+class Solution {
+    public int maxSubArray(int[] nums) {
+
+        int maxSum = nums[0];
+        int current = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+
+            current = Math.max(nums[i], current + nums[i]);
+            maxSum = Math.max(maxSum, current);
+        }
+
+        return maxSum;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+25. Reshape the Matrix (LeetCode 566)
+Java Code
+class Solution {
+    public int[][] matrixReshape(int[][] mat, int r, int c) {
+
+        int m = mat.length;
+        int n = mat[0].length;
+
+        if (m * n != r * c)
+            return mat;
+
+        int[][] result = new int[r][c];
+
+        for (int i = 0; i < m * n; i++) {
+            result[i / c][i % c] = mat[i / n][i % n];
+        }
+
+        return result;
+    }
+}
+
+Time Complexity: O(m × n)
+Space Complexity: O(r × c)
+
+26. Plus One (LeetCode 66)
+Java Code
+class Solution {
+    public int[] plusOne(int[] digits) {
+
+        for (int i = digits.length - 1; i >= 0; i--) {
+
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+
+            digits[i] = 0;
+        }
+
+        int[] result = new int[digits.length + 1];
+        result[0] = 1;
+
+        return result;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1) (excluding output array)
+
+27. Remove Duplicates from Sorted Array (LeetCode 26)
+Java Code
+class Solution {
+    public int removeDuplicates(int[] nums) {
+
+        if (nums.length == 0)
+            return 0;
+
+        int index = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+
+            if (nums[i] != nums[i - 1]) {
+                nums[index++] = nums[i];
+            }
+        }
+
+        return index;
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+28. Minimum Cost to Move Chips to the Same Position (LeetCode 1217)
+Java Code
+class Solution {
+    public int minCostToMoveChips(int[] position) {
+
+        int even = 0;
+        int odd = 0;
+
+        for (int p : position) {
+            if (p % 2 == 0)
+                even++;
+            else
+                odd++;
+        }
+
+        return Math.min(even, odd);
+    }
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
