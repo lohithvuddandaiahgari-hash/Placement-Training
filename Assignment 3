@@ -1,0 +1,1197 @@
+1. Area of Circle
+
+
+import java.util.Scanner;
+
+public class AreaOfCircle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+
+        double area = Math.PI * r * r;
+
+        System.out.println("Area = " + area);
+    }
+}
+
+
+2. Area of Triangle
+
+
+import java.util.Scanner;
+
+public class AreaOfTriangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter base: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double h = sc.nextDouble();
+
+        double area = 0.5 * b * h;
+
+        System.out.println("Area = " + area);
+    }
+}
+
+
+3. Area of Rectangle
+
+
+import java.util.Scanner;
+
+public class AreaOfRectangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter length: ");
+        double l = sc.nextDouble();
+
+        System.out.print("Enter breadth: ");
+        double b = sc.nextDouble();
+
+        System.out.println("Area = " + (l * b));
+    }
+}
+
+
+4. Area of Isosceles Triangle
+
+
+import java.util.Scanner;
+
+public class AreaOfIsoscelesTriangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter equal side: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter base: ");
+        double b = sc.nextDouble();
+
+        double height = Math.sqrt(a * a - (b * b) / 4);
+
+        double area = 0.5 * b * height;
+
+        System.out.println("Area = " + area);
+    }
+}
+
+
+5. Area of Parallelogram
+
+
+import java.util.Scanner;
+
+public class AreaOfParallelogram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter base: ");
+        double base = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double height = sc.nextDouble();
+
+        System.out.println("Area = " + (base * height));
+    }
+}
+
+
+6. Area of Rhombus
+
+
+import java.util.Scanner;
+
+public class AreaOfRhombus {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter diagonal1: ");
+        double d1 = sc.nextDouble();
+
+        System.out.print("Enter diagonal2: ");
+        double d2 = sc.nextDouble();
+
+        double area = (d1 * d2) / 2;
+
+        System.out.println("Area = " + area);
+    }
+}
+
+
+7. Area of Equilateral Triangle
+
+
+import java.util.Scanner;
+
+public class AreaOfEquilateralTriangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter side: ");
+        double side = sc.nextDouble();
+
+        double area = (Math.sqrt(3) / 4) * side * side;
+
+        System.out.println("Area = " + area);
+    }
+}
+
+
+8. Perimeter (Circumference) of Circle
+
+
+import java.util.Scanner;
+
+public class PerimeterOfCircle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+
+        double perimeter = 2 * Math.PI * r;
+
+        System.out.println("Perimeter = " + perimeter);
+    }
+}
+
+
+9. Perimeter of Equilateral Triangle
+
+
+import java.util.Scanner;
+
+public class PerimeterEquilateralTriangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter side: ");
+        double side = sc.nextDouble();
+
+        System.out.println("Perimeter = " + (3 * side));
+    }
+}
+
+
+10. Perimeter of Parallelogram
+
+
+import java.util.Scanner;
+
+public class PerimeterParallelogram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter base: ");
+        double base = sc.nextDouble();
+
+        System.out.print("Enter side: ");
+        double side = sc.nextDouble();
+
+        System.out.println("Perimeter = " + (2 * (base + side)));
+    }
+}
+
+
+11. Perimeter of Rectangle
+
+
+import java.util.Scanner;
+
+public class PerimeterRectangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter length: ");
+        double length = sc.nextDouble();
+
+        System.out.print("Enter breadth: ");
+        double breadth = sc.nextDouble();
+
+        System.out.println("Perimeter = " + (2 * (length + breadth)));
+    }
+}
+
+
+12. Perimeter of Square
+
+
+import java.util.Scanner;
+
+public class PerimeterSquare {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter side: ");
+        double side = sc.nextDouble();
+
+        System.out.println("Perimeter = " + (4 * side));
+    }
+}
+
+
+13. Perimeter of Rhombus
+
+
+import java.util.Scanner;
+
+public class PerimeterRhombus {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter side: ");
+        double side = sc.nextDouble();
+
+        System.out.println("Perimeter = " + (4 * side));
+    }
+}
+
+
+14. Volume of Cone
+
+
+import java.util.Scanner;
+
+public class VolumeCone {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double h = sc.nextDouble();
+
+        double volume = (Math.PI * r * r * h) / 3;
+
+        System.out.println("Volume = " + volume);
+    }
+}
+
+
+15. Volume of Prism
+
+
+import java.util.Scanner;
+
+public class VolumePrism {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter base area: ");
+        double baseArea = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double height = sc.nextDouble();
+
+        double volume = baseArea * height;
+
+        System.out.println("Volume = " + volume);
+    }
+}
+
+
+16. Volume of Cylinder
+
+
+import java.util.Scanner;
+
+public class VolumeCylinder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double h = sc.nextDouble();
+
+        double volume = Math.PI * r * r * h;
+
+        System.out.println("Volume = " + volume);
+    }
+}
+
+
+17. Volume of Sphere
+
+
+import java.util.Scanner;
+
+public class VolumeSphere {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+
+        double volume = (4.0 / 3.0) * Math.PI * r * r * r;
+
+        System.out.println("Volume = " + volume);
+    }
+}
+
+
+18. Volume of Pyramid
+
+
+import java.util.Scanner;
+
+public class VolumePyramid {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter base area: ");
+        double baseArea = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double height = sc.nextDouble();
+
+        double volume = (baseArea * height) / 3;
+
+        System.out.println("Volume = " + volume);
+    }
+}
+
+
+19. Curved Surface Area of Cylinder
+
+
+import java.util.Scanner;
+
+public class CurvedSurfaceAreaCylinder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter height: ");
+        double h = sc.nextDouble();
+
+        double csa = 2 * Math.PI * r * h;
+
+        System.out.println("Curved Surface Area = " + csa);
+    }
+}
+
+
+20. Total Surface Area of Cube
+
+
+import java.util.Scanner;
+
+public class SurfaceAreaCube {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter side: ");
+        double side = sc.nextDouble();
+
+        double area = 6 * side * side;
+
+        System.out.println("Total Surface Area = " + area);
+    }
+}
+
+
+21. Fibonacci Series
+
+
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+
+        int a = 0, b = 1;
+
+        System.out.println("Fibonacci Series:");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+
+
+22. Subtract the Product and Sum of Digits of an Integer
+
+
+import java.util.Scanner;
+
+public class ProductMinusSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        int product = 1;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            product *= digit;
+            sum += digit;
+            num /= 10;
+        }
+
+        System.out.println("Result = " + (product - sum));
+    }
+}
+
+
+23. Print All Factors of a Number
+
+
+import java.util.Scanner;
+
+public class Factors {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        System.out.println("Factors:");
+
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0)
+                System.out.print(i + " ");
+        }
+    }
+}
+
+
+24. Sum Until User Enters 0
+
+
+import java.util.Scanner;
+
+public class SumUntilZero {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int sum = 0;
+        int num;
+
+        while (true) {
+            System.out.print("Enter number (0 to stop): ");
+            num = sc.nextInt();
+
+            if (num == 0)
+                break;
+
+            sum += num;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+
+25. Largest Number Until User Enters 0
+
+
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int largest = Integer.MIN_VALUE;
+        int num;
+
+        while (true) {
+            System.out.print("Enter number (0 to stop): ");
+            num = sc.nextInt();
+
+            if (num == 0)
+                break;
+
+            if (num > largest)
+                largest = num;
+        }
+
+        System.out.println("Largest Number = " + largest);
+    }
+}
+
+
+26. Addition of Two Numbers
+
+
+import java.util.Scanner;
+
+public class Addition {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+
+27. Factorial Program
+
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        long fact = 1;
+
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+
+        System.out.println("Factorial = " + fact);
+    }
+}
+
+
+28. Calculate Electricity Bill
+
+
+import java.util.Scanner;
+
+public class ElectricityBill {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter units consumed: ");
+        int units = sc.nextInt();
+
+        double bill;
+
+        if (units <= 100)
+            bill = units * 1.5;
+        else if (units <= 200)
+            bill = 100 * 1.5 + (units - 100) * 2.5;
+        else
+            bill = 100 * 1.5 + 100 * 2.5 + (units - 200) * 4;
+
+        System.out.println("Electricity Bill = " + bill);
+    }
+}
+
+
+29. Calculate Average of N Numbers
+
+
+import java.util.Scanner;
+
+public class AverageNNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("How many numbers? ");
+        int n = sc.nextInt();
+
+        double sum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Enter number: ");
+            sum += sc.nextDouble();
+        }
+
+        System.out.println("Average = " + (sum / n));
+    }
+}
+
+
+30. Calculate Discount of Product
+
+
+import java.util.Scanner;
+
+public class Discount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Price: ");
+        double price = sc.nextDouble();
+
+        System.out.print("Enter Discount (%): ");
+        double discount = sc.nextDouble();
+
+        double amount = price - (price * discount / 100);
+
+        System.out.println("Final Price = " + amount);
+    }
+}
+
+
+31. Calculate Distance Between Two Points
+
+
+import java.util.Scanner;
+
+public class Distance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter x1: ");
+        double x1 = sc.nextDouble();
+
+        System.out.print("Enter y1: ");
+        double y1 = sc.nextDouble();
+
+        System.out.print("Enter x2: ");
+        double x2 = sc.nextDouble();
+
+        System.out.print("Enter y2: ");
+        double y2 = sc.nextDouble();
+
+        double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+        System.out.println("Distance = " + distance);
+    }
+}
+
+
+32. Calculate Commission Percentage
+
+
+import java.util.Scanner;
+
+public class Commission {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Sales Amount: ");
+        double sales = sc.nextDouble();
+
+        System.out.print("Enter Commission Percentage: ");
+        double percent = sc.nextDouble();
+
+        double commission = sales * percent / 100;
+
+        System.out.println("Commission = " + commission);
+    }
+}
+
+
+33. Power of a Number
+
+
+import java.util.Scanner;
+
+public class Power {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Base: ");
+        double base = sc.nextDouble();
+
+        System.out.print("Enter Exponent: ");
+        double exponent = sc.nextDouble();
+
+        System.out.println("Power = " + Math.pow(base, exponent));
+    }
+}
+
+
+34. Calculate Depreciation of Value
+
+
+import java.util.Scanner;
+
+public class Depreciation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Original Value: ");
+        double value = sc.nextDouble();
+
+        System.out.print("Enter Depreciation Rate (%): ");
+        double rate = sc.nextDouble();
+
+        double finalValue = value - (value * rate / 100);
+
+        System.out.println("Depreciated Value = " + finalValue);
+    }
+}
+
+
+35. Calculate Batting Average
+
+
+import java.util.Scanner;
+
+public class BattingAverage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Total Runs: ");
+        double runs = sc.nextDouble();
+
+        System.out.print("Enter Times Out: ");
+        double outs = sc.nextDouble();
+
+        double average = runs / outs;
+
+        System.out.println("Batting Average = " + average);
+    }
+}
+
+
+36. Calculate CGPA
+
+
+import java.util.Scanner;
+
+public class CGPA {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number of Subjects: ");
+        int n = sc.nextInt();
+
+        double total = 0;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Enter Grade Point: ");
+            total += sc.nextDouble();
+        }
+
+        System.out.println("CGPA = " + (total / n));
+    }
+}
+
+
+37. Compound Interest
+
+
+import java.util.Scanner;
+
+public class CompoundInterest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Principal: ");
+        double p = sc.nextDouble();
+
+        System.out.print("Enter Rate: ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter Time: ");
+        double t = sc.nextDouble();
+
+        double amount = p * Math.pow((1 + r / 100), t);
+        double ci = amount - p;
+
+        System.out.println("Compound Interest = " + ci);
+    }
+}
+
+
+38. Calculate Average Marks
+
+
+import java.util.Scanner;
+
+public class AverageMarks {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number of Subjects: ");
+        int n = sc.nextInt();
+
+        double total = 0;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Enter Marks: ");
+            total += sc.nextDouble();
+        }
+
+        System.out.println("Average Marks = " + (total / n));
+    }
+}
+
+
+39. Sum of N Numbers
+
+
+import java.util.Scanner;
+
+public class SumNNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+
+40. Armstrong Number
+
+
+import java.util.Scanner;
+
+public class Armstrong {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int num = sc.nextInt();
+
+        int temp = num, sum = 0;
+
+        while (temp > 0) {
+            int rem = temp % 10;
+            sum += rem * rem * rem;
+            temp /= 10;
+        }
+
+        if (sum == num)
+            System.out.println("Armstrong Number");
+        else
+            System.out.println("Not Armstrong Number");
+    }
+}
+
+41. Find NCR & NPR
+
+
+import java.util.Scanner;
+
+public class NCRNPR {
+
+    static long factorial(int n) {
+        long fact = 1;
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+        return fact;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+
+        System.out.print("Enter r: ");
+        int r = sc.nextInt();
+
+        long ncr = factorial(n) / (factorial(r) * factorial(n - r));
+        long npr = factorial(n) / factorial(n - r);
+
+        System.out.println("NCR = " + ncr);
+        System.out.println("NPR = " + npr);
+    }
+}
+
+
+42. Reverse a String
+
+
+import java.util.Scanner;
+
+public class ReverseString {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a String: ");
+        String str = sc.nextLine();
+
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        System.out.println("Reversed String = " + rev);
+    }
+}
+
+
+43. Check if a Number is Palindrome
+
+
+import java.util.Scanner;
+
+public class NumberPalindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int num = sc.nextInt();
+
+        int temp = num;
+        int rev = 0;
+
+        while (temp != 0) {
+            rev = rev * 10 + temp % 10;
+            temp /= 10;
+        }
+
+        if (num == rev)
+            System.out.println("Palindrome Number");
+        else
+            System.out.println("Not a Palindrome Number");
+    }
+}
+
+
+44. Future Investment Value
+
+
+import java.util.Scanner;
+
+public class FutureInvestment {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Present Value: ");
+        double p = sc.nextDouble();
+
+        System.out.print("Enter Annual Interest Rate (%): ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter Number of Years: ");
+        double t = sc.nextDouble();
+
+        double futureValue = p * Math.pow((1 + r / 100), t);
+
+        System.out.println("Future Investment Value = " + futureValue);
+    }
+}
+
+
+45. HCF of Two Numbers
+
+
+import java.util.Scanner;
+
+public class HCF {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter First Number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter Second Number: ");
+        int b = sc.nextInt();
+
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        System.out.println("HCF = " + a);
+    }
+}
+
+
+46. LCM of Two Numbers
+
+
+import java.util.Scanner;
+
+public class LCM {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter First Number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter Second Number: ");
+        int b = sc.nextInt();
+
+        int x = a, y = b;
+
+        while (y != 0) {
+            int temp = y;
+            y = x % y;
+            x = temp;
+        }
+
+        int hcf = x;
+        int lcm = (a * b) / hcf;
+
+        System.out.println("LCM = " + lcm);
+    }
+}
+
+
+47. Check Vowel or Consonant
+
+
+import java.util.Scanner;
+
+public class VowelConsonant {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a Character: ");
+        char ch = Character.toLowerCase(sc.next().charAt(0));
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            System.out.println("Vowel");
+        else
+            System.out.println("Consonant");
+    }
+}
+
+
+48. Perfect Number
+
+
+import java.util.Scanner;
+
+public class PerfectNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0)
+                sum += i;
+        }
+
+        if (sum == num)
+            System.out.println("Perfect Number");
+        else
+            System.out.println("Not a Perfect Number");
+    }
+}
+
+
+49. Check Leap Year
+
+
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Year: ");
+        int year = sc.nextInt();
+
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not a Leap Year");
+    }
+}
+
+
+50. Sum of Digits of a Number
+
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+
+        System.out.println("Sum of Digits = " + sum);
+    }
+}
+
+
+51. Count Even Days in August
+
+
+public class EvenDaysAugust {
+    public static void main(String[] args) {
+
+        int count = 0;
+
+        for (int day = 1; day <= 31; day++) {
+            if (day % 2 == 0)
+                count++;
+        }
+
+        System.out.println("Kunal can go out on " + count + " days.");
+    }
+}
+
+
+52. Sum of Negative Numbers, Positive Even Numbers, and Positive Odd Numbers
+
+
+import java.util.Scanner;
+
+public class SumCategories {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        int negativeSum = 0;
+        int positiveEvenSum = 0;
+        int positiveOddSum = 0;
+
+        while (true) {
+            System.out.print("Enter Number (0 to stop): ");
+            num = sc.nextInt();
+
+            if (num == 0)
+                break;
+
+            if (num < 0)
+                negativeSum += num;
+            else if (num % 2 == 0)
+                positiveEvenSum += num;
+            else
+                positiveOddSum += num;
+        }
+
+        System.out.println("Sum of Negative Numbers = " + negativeSum);
+        System.out.println("Sum of Positive Even Numbers = " + positiveEvenSum);
+        System.out.println("Sum of Positive Odd Numbers = " + positiveOddSum);
+    }
+}
