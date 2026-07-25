@@ -1,0 +1,431 @@
+1. Maximum and Minimum of Three Numbers
+
+
+import java.util.Scanner;
+
+public class MaxMin {
+
+    static void maximum(int a, int b, int c) {
+        int max = a;
+        if (b > max)
+            max = b;
+        if (c > max)
+            max = c;
+        System.out.println("Maximum = " + max);
+    }
+
+    static void minimum(int a, int b, int c) {
+        int min = a;
+        if (b < min)
+            min = b;
+        if (c < min)
+            min = c;
+        System.out.println("Minimum = " + min);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter three numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        maximum(a, b, c);
+        minimum(a, b, c);
+    }
+}
+
+
+2. Check Whether a Number is Even or Odd
+
+
+import java.util.Scanner;
+
+public class EvenOdd {
+
+    static void checkEvenOdd(int num) {
+        if (num % 2 == 0)
+            System.out.println("Even Number");
+        else
+            System.out.println("Odd Number");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        checkEvenOdd(num);
+    }
+}
+
+
+3. Check Voting Eligibility
+
+
+import java.util.Scanner;
+
+public class VotingEligibility {
+
+    static void checkVote(int age) {
+        if (age >= 18)
+            System.out.println("Eligible to Vote");
+        else
+            System.out.println("Not Eligible to Vote");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Age: ");
+        int age = sc.nextInt();
+
+        checkVote(age);
+    }
+}
+
+
+4. Sum of Two Numbers Using Method
+
+
+import java.util.Scanner;
+
+public class SumMethod {
+
+    static void sum(int a, int b) {
+        System.out.println("Sum = " + (a + b));
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        sum(a, b);
+    }
+}
+
+
+5. Product of Two Numbers
+
+
+import java.util.Scanner;
+
+public class ProductMethod {
+
+    static int product(int a, int b) {
+        return a * b;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.println("Product = " + product(a, b));
+    }
+}
+
+
+6. Circumference and Area of a Circle
+
+
+import java.util.Scanner;
+
+public class Circle {
+
+    static void calculate(double r) {
+        double area = Math.PI * r * r;
+        double circumference = 2 * Math.PI * r;
+
+        System.out.println("Area = " + area);
+        System.out.println("Circumference = " + circumference);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Radius: ");
+        double r = sc.nextDouble();
+
+        calculate(r);
+    }
+}
+
+
+7. Check Whether a Number is Prime
+
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+    static boolean isPrime(int n) {
+
+        if (n <= 1)
+            return false;
+
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int n = sc.nextInt();
+
+        if (isPrime(n))
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime Number");
+    }
+}
+
+
+8. Grade Calculation Using Method
+
+
+import java.util.Scanner;
+
+public class Grade {
+
+    static void displayGrade(int marks) {
+
+        if (marks >= 91 && marks <= 100)
+            System.out.println("Grade = AA");
+        else if (marks >= 81)
+            System.out.println("Grade = AB");
+        else if (marks >= 71)
+            System.out.println("Grade = BB");
+        else if (marks >= 61)
+            System.out.println("Grade = BC");
+        else if (marks >= 51)
+            System.out.println("Grade = CD");
+        else if (marks >= 41)
+            System.out.println("Grade = DD");
+        else
+            System.out.println("Grade = Fail");
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Marks: ");
+        int marks = sc.nextInt();
+
+        displayGrade(marks);
+    }
+}
+
+
+9. Factorial Using Method
+
+
+import java.util.Scanner;
+
+public class FactorialMethod {
+
+    static long factorial(int n) {
+        long fact = 1;
+
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+
+        return fact;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int n = sc.nextInt();
+
+        System.out.println("Factorial = " + factorial(n));
+    }
+}
+
+
+10. Check Palindrome Using Method
+
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+    static boolean isPalindrome(int num) {
+
+        int temp = num;
+        int rev = 0;
+
+        while (temp > 0) {
+            rev = rev * 10 + temp % 10;
+            temp /= 10;
+        }
+
+        return num == rev;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int num = sc.nextInt();
+
+        if (isPalindrome(num))
+            System.out.println("Palindrome Number");
+        else
+            System.out.println("Not a Palindrome Number");
+    }
+}
+
+
+11. Sum of Two Numbers Using Function
+
+
+import java.util.Scanner;
+
+public class SumFunction {
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter First Number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter Second Number: ");
+        int b = sc.nextInt();
+
+        System.out.println("Sum = " + add(a, b));
+    }
+}
+
+
+12. Check Pythagorean Triplet
+
+
+import java.util.Scanner;
+
+public class PythagoreanTriplet {
+
+    static boolean isPythagorean(int a, int b, int c) {
+
+        return (a * a + b * b == c * c) ||
+               (a * a + c * c == b * b) ||
+               (b * b + c * c == a * a);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Three Numbers: ");
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if (isPythagorean(a, b, c))
+            System.out.println("Pythagorean Triplet");
+        else
+            System.out.println("Not a Pythagorean Triplet");
+    }
+}
+
+
+13. Print Prime Numbers Between Two Numbers
+
+
+import java.util.Scanner;
+
+public class PrimeRange {
+
+    static boolean isPrime(int n) {
+
+        if (n <= 1)
+            return false;
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+    static void printPrime(int start, int end) {
+
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i))
+                System.out.print(i + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Starting Number: ");
+        int start = sc.nextInt();
+
+        System.out.print("Enter Ending Number: ");
+        int end = sc.nextInt();
+
+        System.out.println("Prime Numbers:");
+
+        printPrime(start, end);
+    }
+}
+
+
+14. Sum of First N Natural Numbers
+
+
+import java.util.Scanner;
+
+public class NaturalSum {
+
+    static int sumNatural(int n) {
+
+        int sum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        System.out.println("Sum = " + sumNatural(n));
+    }
+}
